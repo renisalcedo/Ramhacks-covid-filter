@@ -1,4 +1,7 @@
-const setCovidContent = () => {
+/*
+    @return foundOccurences - Returns all occurences of the keyword
+*/
+const getCovidContent = () => {
     const foundOccurences = []
     const allTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5','h6', 'small']
 
@@ -7,23 +10,25 @@ const setCovidContent = () => {
     */
     for (let i = 0; i < allTags.length; i++) {
         let currTag = allTags[i]
-        getCovidContent(currTag)
+        setCovidContent(currTag)
     }
 
     /*
         Would iterate over the content ad detect the covid keyword and append occurences
         @param tag - String tag from where in the page to get the content
     */
-    function getCovidContent(tag) {
+    function setCovidContent(tag) {
         const tagContent = document.getElementsByTagName(tag)
 
         for (let i = 0; i < tagContent.length; i++) {
             let currContent = tagContent[i]
-            let content = currContent.innerHTML
+            let content = currContent.innerText
             let normalizedContent = content.toLowerCase()
 
             // Tag property would get added to our list if contains covid in the content
             if (normalizedContent.indexOf("covid") !== -1) {
+                console.log(currContent)
+                console.log(normalizedContent.indexOf("covid"))
                 foundOccurences.push(currContent)
             }
         }
@@ -31,3 +36,6 @@ const setCovidContent = () => {
 
     return foundOccurences;
 }
+
+const occurencesProps = getCovidContent()
+const ocurrencesNum = occurencesProps.length

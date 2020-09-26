@@ -3,16 +3,11 @@
 
   "name": "CovidFilter",
   "description": "This extension will highlite misinformation related to covid19",
-  "version": "0.0.1",
+  "version": "1.0.0",
 
   "browser_action": {
     "default_popup": "index.html",
     "default_title": "Open the popup"
-  },
-  "icons": {
-    "16": "logo-small.png",
-    "48": "logo-small.png",
-    "128": "logo-small.png"
   },
   "permissions": [
   ]

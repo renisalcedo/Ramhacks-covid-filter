@@ -22,7 +22,8 @@
     "default_title": "Open the popup"
   },
   "permissions": [
-    "storage"
+    "storage", 
+    "https://ramhacks-covid-filter.firebaseio.com/.lp?start=t&ser=63116996&cb=1&v=5&p=1:760052880401:web:f3d405d07c44f1be400db0"
   ],
-  "content_security_policy": "script-src 'self' 'sha256-B+Qe/KNUDtGDd/m1g5ycAq1DgpLs9ubKmYTlOHBogC8='; object-src 'self'"
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'; connect-src 'self' wss://*.firebaseio.com;"
 }

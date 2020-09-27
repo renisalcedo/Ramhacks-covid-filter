@@ -81,3 +81,140 @@ text {
   fill: #86afad;
 }
 
+@media screen and (max-width: 1000px)
+{
+    .tabla
+    {
+        width: 45px;
+        max-width: none;
+        margin-bottom: 40px;
+        flex-wrap: initial;
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+    .tabla
+    {
+        width: 45px;
+        padding:30px
+    }
+    .tabla > h2 
+    {
+        margin-top: 40px;
+
+    }
+}
+@media screen and (max-width: 998px)
+{
+    .tabla
+    {
+        width: 30%;
+        padding: 45px;
+    }
+    .circle
+    {
+        width: 40px;
+    }
+}
+@media screen and (max-width: 865px)
+{
+    .tabla
+    {
+        width: 40%;
+        padding: 65px;
+    }
+    .circle
+    {
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 947px)
+{
+    .tabla
+    {
+        width: 30%;
+        padding: 40px;
+    }
+    .circle
+    {
+        width: 40px;
+    }
+}
+@media screen and (max-width: 886px)
+{
+    .tabla
+    {
+        width: 30%;
+        padding: 30px;
+    }
+    .circle
+    {
+        width: 40px;
+    }
+}
+@media screen and (max-width: 360px)
+{
+    .tabla
+    {
+        width: 60%;
+        padding: 10px;
+    }
+    .circle
+    {
+        width: 30px;
+    }
+}
+@media screen and (max-width: 411px)
+{
+    .tabla
+    {
+        width: 60%;
+        padding: 20px;
+    }
+    .circle
+    {
+        width: 40px;
+    }
+}
+@media screen and (max-width: 320px)
+{
+    .tabla
+    {
+        width: 70%;
+        padding: 10px;
+    }
+    .circle
+    {
+        width: 30px;
+    }
+}
+@media screen and (max-width: 414px)
+{
+    .tabla
+    {
+        width: 40%;
+        padding: 5px;
+    }
+    .circle
+    {
+        width: 30px;
+    }
+}
+@media screen and (max-width: 540px)
+{
+    .tabla
+    {
+        width: 60%;
+        padding: 55px;
+    }
+    .circle
+    {
+        width: 30px;
+    }
+}
+
+
+
+

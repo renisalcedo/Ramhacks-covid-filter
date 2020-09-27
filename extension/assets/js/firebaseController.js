@@ -1,7 +1,9 @@
-var database = firebase.database();
-console.log(database)
+var db = firebase.database();
 
-
-// db.collection("information").get().then((data) => {
-//     console.log(data)
-// });
+var rcfRef = db.ref('ramhacks-covid-filter');
+rcfRef.on('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      var childData = childSnapshot.val();
+      console.log(childData);
+    });
+});

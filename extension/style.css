@@ -26,7 +26,7 @@ body{
 .tabla
 {
     width: 33%;
-    height: 550px;
+    height: 500px;
     margin: auto;
     background: #343759;
     border: 1px solid #000;
@@ -45,7 +45,7 @@ body{
 
 .tabla img
 {
-    width: 64px;
+    width: 60px;
     margin-bottom: 35px;
 }
 
@@ -61,17 +61,23 @@ body{
     margin-bottom: 20px;
 }
 
-.boton
-{
-    display: inline-block;
-    width: 150px;
-    padding: 12px;
-    background: #a5f059;
-    text-decoration: none;
-    color: #343759;
-    border-radius: 100px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-    margin: auto;
+
+.container {
+    display: block;
+    margin: 0 auto;
+    width: 380px;
+  }
+
+.progress {
+  fill:none;
+  stroke: #f8f8f8;
+  stroke-width: 7;
+  stroke-linecap: round;
+  transform-origin: center;
+  transform: rotate(-90deg);
 }
+text {
+  font-family: 'Lato', sans-serif;
+  fill: #86afad;
+}
+

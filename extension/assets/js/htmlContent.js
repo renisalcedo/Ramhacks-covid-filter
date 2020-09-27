@@ -1,13 +1,4 @@
-// var el = document.createElement("div");
-// el.className = "mdl-tooltip"
-// el.innerHTML = "Testing the tooltip";
-
-// function insertAfter(referenceNode, newNode) {
-//   referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-// }
-
 // insertAfter(currOccurence, el)
-
 chrome.runtime.sendMessage({'occurrences': ocurrencesNum})
 
 function HTMLEvents() {
@@ -15,9 +6,34 @@ function HTMLEvents() {
 
     for (let i = 0; i < occurencesProps.length; i++) {
         let currOccurence = occurencesProps[i]
-        currOccurence.style['background-color'] = colors.danger
-        currOccurence.style['padding'] = '.2rem'
-        currOccurence.setAttribute('title', 'Very likely a misinformation...')
+        addCss(currOccurence)
+   }
+
+    function addCss(elem) {
+        const infoContainer = createInfoContainer()
+        $(`${elem.tagName}:contains(${elem.innerText})`).hover(
+            () => $(infoContainer).toggle()
+        )
+    
+        elem.style['border-left'] = `2px solid ${colors.danger}`
+        elem.style['border-right'] = `2px solid ${colors.danger}`
+        elem.style['border-radius'] = "5%"
+        insertAfter(elem,infoContainer)
+        elem.setAttribute('title', 'Very likely a misinformation...')
+    }
+
+    function insertAfter(referenceNode, newNode) {
+        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+    }
+
+    function createInfoContainer() {
+        const infoContainer = document.createElement("div");
+        infoContainer.style['display'] = 'none'
+        infoContainer.style['background-color'] = '#eee'
+        infoContainer.style['position'] = 'absolute'
+        infoContainer.innerHTML = '<p>Some information here</p>';
+
+        return infoContainer
     }
 }
 

@@ -2,219 +2,97 @@
 {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-body{
-    background: #dfe2df;
-    font-family: 'open sans';
-}
-
-.contenedor
+body
 {
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-
+    min-height: 100vh;
+    background: #343759;
 }
 
-.tabla
+.box
 {
-    width: 33%;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:  #343759;
+}
+
+.box .percent
+{
+    position: relative;
+    width: 150px;
     height: 500px;
-    margin: auto;
-    background: #343759;
-    border: 1px solid #000;
-    border-radius: 4px;
-    box-shadow: 0px 0px 4px 0px #000;
-    padding: 60px;
-    text-align: center;
+}
+
+.box .percent svg 
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .percent svg circle
+{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    stroke-dashoffset: 440;
+    stroke-dasharray: 440; 
+    stroke-linecap: round; 
+    transform: translate(5px,5px);
+} 
+
+.box .percent svg circle:nth-child(1)
+{
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+}
+.box .percent svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 87) / 100);
+    stroke: #0cb51a;
+}
+
+.box .percent .number
+{
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    width: 100%;
+    height: 123%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
 }
 
-.tabla>h2 
+.box .percent .number h2 
 {
-    font-size: 30px;
-    margin-bottom: 35px;
+    font-size: 48px;
 }
 
-.tabla img
+.box .text
 {
-    width: 60px;
-    margin-bottom: 35px;
+    padding: 0 0 1px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-.tabla>h3
+.box img
 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
 
-.tabla>p
-{
-    display: block;
-    margin-bottom: 20px;
+    padding: 50px;
+    height: 50px;
 }
-
-
-.container {
-    display: block;
-    margin: 0 auto;
-    width: 380px;
-  }
-
-.progress {
-  fill:none;
-  stroke: #f8f8f8;
-  stroke-width: 7;
-  stroke-linecap: round;
-  transform-origin: center;
-  transform: rotate(-90deg);
-}
-text {
-  font-family: 'Lato', sans-serif;
-  fill: #86afad;
-}
-
-@media screen and (max-width: 1000px)
-{
-    .tabla
-    {
-        width: 45px;
-        max-width: none;
-        margin-bottom: 40px;
-        flex-wrap: initial;
-    }
-}
-
-@media screen and (max-width: 700px)
-{
-    .tabla
-    {
-        width: 45px;
-        padding:30px
-    }
-    .tabla > h2 
-    {
-        margin-top: 40px;
-
-    }
-}
-@media screen and (max-width: 998px)
-{
-    .tabla
-    {
-        width: 30%;
-        padding: 45px;
-    }
-    .circle
-    {
-        width: 40px;
-    }
-}
-@media screen and (max-width: 865px)
-{
-    .tabla
-    {
-        width: 40%;
-        padding: 65px;
-    }
-    .circle
-    {
-        width: 40px;
-    }
-}
-
-@media screen and (max-width: 947px)
-{
-    .tabla
-    {
-        width: 30%;
-        padding: 40px;
-    }
-    .circle
-    {
-        width: 40px;
-    }
-}
-@media screen and (max-width: 886px)
-{
-    .tabla
-    {
-        width: 30%;
-        padding: 30px;
-    }
-    .circle
-    {
-        width: 40px;
-    }
-}
-@media screen and (max-width: 360px)
-{
-    .tabla
-    {
-        width: 60%;
-        padding: 10px;
-    }
-    .circle
-    {
-        width: 30px;
-    }
-}
-@media screen and (max-width: 411px)
-{
-    .tabla
-    {
-        width: 60%;
-        padding: 20px;
-    }
-    .circle
-    {
-        width: 40px;
-    }
-}
-@media screen and (max-width: 320px)
-{
-    .tabla
-    {
-        width: 70%;
-        padding: 10px;
-    }
-    .circle
-    {
-        width: 30px;
-    }
-}
-@media screen and (max-width: 414px)
-{
-    .tabla
-    {
-        width: 40%;
-        padding: 5px;
-    }
-    .circle
-    {
-        width: 30px;
-    }
-}
-@media screen and (max-width: 540px)
-{
-    .tabla
-    {
-        width: 60%;
-        padding: 55px;
-    }
-    .circle
-    {
-        width: 30px;
-    }
-}
-
-
-
-

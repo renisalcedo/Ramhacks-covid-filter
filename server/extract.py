@@ -11,7 +11,7 @@ keywords = [
 config = {
     "apiKey": "AIzaSyDsJCG-vK-oPL9aXXZaekGTIrJTlTpSbyI",
     "authDomain": "ramhacks-covid-filter.firebaseapp.com",
-    "databaseURL": "hhttps://ramhacks-covid-filter.firebaseio.com",
+    "databaseURL": "https://ramhacks-covid-filter.firebaseio.com",
     "storageBucket": "ramhacks-covid-filter.appspot.com",
 }
 firebase = Firebase(config)
@@ -22,7 +22,7 @@ r = requests.get(URL)
 soup = BeautifulSoup(r.content, "lxml")
 i = 0
 data = {}
-data[URL] = []
+data["who1"] = []
 
 for text in soup.body.find_all(string=True):
     if text.parent.name not in ['script', 'meta', 'link', 'style'] and not isinstance(text, Comment) and text != '\n':
@@ -34,12 +34,10 @@ for text in soup.body.find_all(string=True):
             if word in text_piece:
                 numRank += 1
         if numRank > 0:
-            data[URL].append({
+            data["who1"].append({
                 i : text.strip(),
                 'keywords' : numRank
             })
-        
-with open('data.json', 'w') as outfile:
-    json.dump(data, outfile)
-    
-db.child("ramhacks-covid-filter").push(data)
+
+json.dumps(data)
+db.child("correct").push(data)

@@ -8,15 +8,21 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-
-      "js": ["./js/content.js"]
+      "js": ["./assets/js/content.js", "./assets/js/htmlContent.js"]
     }
   ],
+
+  "background": {
+    "scripts": ["./assets/js/background.js"],
+    "persistent": false
+  },
 
   "browser_action": {
     "default_popup": "index.html",
     "default_title": "Open the popup"
   },
   "permissions": [
-  ]
+    "storage"
+  ],
+  "content_security_policy": "script-src 'self' 'sha256-B+Qe/KNUDtGDd/m1g5ycAq1DgpLs9ubKmYTlOHBogC8='; object-src 'self'"
 }

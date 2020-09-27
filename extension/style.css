@@ -1,132 +1,77 @@
-* {
+*
+{
     margin: 0;
     padding: 0;
-}
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-header{
-    position: fixed;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(26, 185, 212, 1) 0%, rgba(21, 82, 203, 1) 80%);
-    height: 10px;
-    padding: 30px;
-    width: 100%;
-}
-nav{
-    position: fixed;
-    top: 10px;
-    left: 20px;
-    display: flex;
-    justify-content: flex-start;
-}
-h3{
-    top: 20px;
-    padding: 6px;
-    color: #000;
+    box-sizing: border-box;
 }
 
-img{
-    height: 20px;
-    padding: 10px;
+body{
+    background: #dfe2df;
+    font-family: 'open sans';
 }
-section{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
-.body{
+
+.contenedor
+{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: rgb(232, 232, 232);
+    flex-wrap: wrap;
+
 }
-.box{
-    position: relative;
-    width: 300px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: rgb(247, 247, 247);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, .2);
-}
-.box .percent{
-    position: relative;
-    width: 150px;
-    height: 150px;
-}
-.box .percent svg{
-    position: relative;
-    width: 150px;
-    height: 150px;
-}
-.box .percent svg circle{
-    width: 150px;
-    height: 150px;
-    fill: none;
-    stroke-width: 10;
-    stroke: #000;
-    transform: translate(5px,5px);
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
-    stroke-linecap: round;
-}
-.box .percent svg circle:nth-child(1){
-    stroke-dashoffset: 0;
-    stroke: #b3b3b3;
-}
-.box .percent svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 87) / 100);
-    stroke: #680808;
-}
-.box .percent .number{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(0, 0, 0);
-}
-.box .percent .number h2{
-    font-size: 48px;
-}
-.box .percent .number h2 span{
-    font-size: 24px;
-}
-.box .text1{
-    padding: 10px 5px 40px;
-    color: rgb(0, 0, 0);
-    font-weight: 700;
-}
-.btn{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    background: #00308F;
-    width: 116px;
-    padding: 17px;
+
+.tabla
+{
+    width: 33%;
+    height: 550px;
+    margin: auto;
+    background: #343759;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px #000;
+    padding: 60px;
     text-align: center;
-    text-decoration: none;
     color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.1s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;
 }
-.btn:hover, .btn:focus, btn:active{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+
+.tabla>h2 
+{
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.tabla img
+{
+    width: 64px;
+    margin-bottom: 35px;
+}
+
+.tabla>h3
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.tabla>p
+{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.boton
+{
+    display: inline-block;
+    width: 150px;
+    padding: 12px;
+    background: #a5f059;
+    text-decoration: none;
+    color: #343759;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin: auto;
 }

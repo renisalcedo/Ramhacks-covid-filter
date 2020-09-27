@@ -18,27 +18,19 @@ body
 {
     position: relative;
     width: 300px;
-    height: 450px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background:  #343759;
-    box-shadow: 0 30px 60px rgba(0,0,0,.2);
-}
-
-.box img
-{
-
-    padding: 50px;
-    height: 50px;
 }
 
 .box .percent
 {
     position: relative;
     width: 150px;
-    height: 280px;
+    height: 500px;
 }
 
 .box .percent svg 
@@ -78,7 +70,7 @@ body
     top: 0;
     left: 0;
     width: 100%;
-    height: 190%;
+    height: 130%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,3 +90,9 @@ body
     letter-spacing: 1px;
 }
 
+.box img
+{
+
+    padding: 50px;
+    height: 50px;
+}

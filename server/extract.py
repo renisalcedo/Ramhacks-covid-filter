@@ -1,11 +1,21 @@
 import requests
 from bs4 import BeautifulSoup, Comment
 import json
+from firebase import Firebase
 
 keywords = [
     "covid-19", "coronavirus", "virus", "mask", "cold", "sneeze", "curve", "pandemic",
     "quarantine", "infect"
     ]
+
+config = {
+    "apiKey": "AIzaSyDsJCG-vK-oPL9aXXZaekGTIrJTlTpSbyI",
+    "authDomain": "ramhacks-covid-filter.firebaseapp.com",
+    "databaseURL": "hhttps://ramhacks-covid-filter.firebaseio.com",
+    "storageBucket": "ramhacks-covid-filter.appspot.com",
+}
+firebase = Firebase(config)
+db = firebase.database()
 
 URL = "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
 r = requests.get(URL)
@@ -31,3 +41,5 @@ for text in soup.body.find_all(string=True):
         
 with open('data.json', 'w') as outfile:
     json.dump(data, outfile)
+    
+db.child("ramhacks-covid-filter").push(data)
